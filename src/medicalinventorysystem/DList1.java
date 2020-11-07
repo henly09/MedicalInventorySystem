@@ -10,12 +10,13 @@ package medicalinventorysystem;
  *  @author Henz Montera
  * @param <E>
  */
-public class DList<E> {
+public class DList1<E> {
+    
     private DNode<E> header, trailer,tempo;
     private int size;
     
     
-    public DList(){
+    public DList1(){
         trailer = new DNode<>(null, null, null);
         header = new DNode<>(null, null, trailer);
         trailer.setPrev(header);

@@ -10,12 +10,12 @@ package medicalinventorysystem;
  * @author Henz Montera
  * @param <E>
  */
-public class dlistcll<E> implements dcll<E>{
+public class dlistcll2<E> implements dcll<E> {
     
-    DList1<E> list;
+    DList2<E> list;
     
-    public dlistcll(){
-        list = new DList1<>();
+    public dlistcll2(){
+        list = new DList2<>();
     }
 
     @Override
@@ -101,6 +101,5 @@ public class dlistcll<E> implements dcll<E>{
         }
         return list.removeLast();
     }
-
-   
+    
 }
