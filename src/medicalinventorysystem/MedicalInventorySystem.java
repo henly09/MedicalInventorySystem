@@ -205,10 +205,7 @@ public class MedicalInventorySystem {
         System.out.print("Do you want to add more medicine? Yes[Y] || No[N] ");
         String choice = scan.nextLine();
         System.out.print("\n\n\n\n\n");
-       
-       
-          
-        
+  
             switch (choice) {
             case "Y":
             case "y":
