@@ -142,13 +142,27 @@ public class MedicalInventorySystem {
          System.out.print("Quality of the Medicine "+a+": ");
          c = scan.nextLine();
          System.out.print("\n\n\n\n\n");
-         System.out.print("Date of the Production of the "+a+":");
+         System.out.print("Date of the Production of the "+a+": mm/dd/yy:");
          d = scan.nextLine();
          System.out.print("\n\n\n\n\n");
-         System.out.print("Quantity: ");
-         e = Integer.parseInt(scan.nextLine());
-         System.out.print("\n\n\n\n\n");
-         System.out.print("Date of Expiration: ");
+         
+//---------------------------------------------------------------------  
+    
+         do{   
+         System.out.print("Quantity: "); 
+         try {          
+             e = Integer.parseInt(scan.nextLine()); 
+             break;     
+         } catch (NumberFormatException x) { 
+             System.out.print("Your input is invalid.");
+             System.out.print("\n\n\n\n\n");
+         }     
+         }while (true);
+         
+//---------------------------------------------------------------------  
+        
+         System.out.print("\n\n\n\n\n"); 
+         System.out.print("Date of Expiration: mm/dd/yy:");
          f = scan.nextLine();
          System.out.print("\n\n\n\n\n");
          System.out.print("Supplier's Name: ");
@@ -160,18 +174,51 @@ public class MedicalInventorySystem {
          System.out.print("Name of the Medicine's Company: ");
          i = scan.nextLine();
          System.out.print("\n\n\n\n\n");
-         System.out.print("Date of Purchased: ");
+         System.out.print("Date of Purchased: mm/dd/yy:");
          j = scan.nextLine();
-         System.out.print("\n\n\n\n\n");
-         System.out.print("Price of the Purchased "+a+" : ");
-         k = Double.parseDouble(scan.nextLine());
-         System.out.print("\n\n\n\n\n");
-         System.out.print("Sale Price of the "+a+" : ");
-         l = Double.parseDouble(scan.nextLine());
-         System.out.print("\n\n\n\n\n");
-         System.out.print("Medicine's rack No# : ");
-         m = Integer.parseInt(scan.nextLine());
-         System.out.print("\n\n\n\n\n");
+         System.out.print("\n\n\n\n\n"); 
+
+//---------------------------------------------------------------------          
+         
+         do{   
+         System.out.print("Price of the Purchased "+a+" : "); 
+         try {          
+             k = Double.parseDouble(scan.nextLine());
+             break;     
+         } catch (NumberFormatException x) { 
+             System.out.print("Your input is invalid.");
+             System.out.print("\n\n\n\n\n");
+         }     
+         }while (true);
+         
+//--------------------------------------------------------------------- 
+
+         System.out.print("\n\n\n\n\n"); 
+         do{   
+         System.out.print("Sale Price of the "+a+" : "); 
+         try {          
+             l = Double.parseDouble(scan.nextLine());
+             break;     
+         } catch (NumberFormatException x) { 
+             System.out.print("Your input is invalid.");
+             System.out.print("\n\n\n\n\n");
+         }     
+         }while (true);
+         
+//---------------------------------------------------------------------   
+         
+         System.out.print("\n\n\n\n\n"); 
+         do{   
+         System.out.print("Medicine's rack No# : "); 
+         try {          
+             m = Integer.parseInt(scan.nextLine());
+             break;     
+         } catch (NumberFormatException x) { 
+             System.out.print("Your input is invalid.");
+             System.out.print("\n\n\n\n\n");
+         }     
+         }while (true);
+         System.out.print("\n\n\n\n\n");       
          
 //        com2.addlast(new inventorymedicine("Paracetamol","For fever and headache","Generic","11/31/12",41,"12/31/20","DDC","Tablet","St.Lukes Hospital","11/41/08",5.00,12.41,41));
 //        com2.addlast(new inventorymedicine("Neozep","For fever and headache","Generic","11/31/12",41,"12/31/20","DDC","Tablet","St.Lukes Hospital","11/41/08",5.00,12.41,41));
@@ -439,15 +486,37 @@ public class MedicalInventorySystem {
          System.out.print("Type of Equipment: ");
          e = scan.nextLine();
          System.out.print("\n\n\n\n\n");
-         System.out.print("Date of Purchase: ");
+         System.out.print("Date of Purchase:  mm/dd/yy:");
          f = scan.nextLine();
          System.out.print("\n\n\n\n\n");
-         System.out.print("Quantity: ");
-         g = Integer.parseInt(scan.nextLine());
-         System.out.print("\n\n\n\n\n");
-         System.out.print("Price of the purchased equipment:");
-         h = Double.parseDouble(scan.nextLine());
-         System.out.print("\n\n\n\n\n");
+           
+//------------------------------------------------------------
+         
+         do{   
+         System.out.print("Quantity: "); 
+         try {          
+             g = Integer.parseInt(scan.nextLine()); 
+             break;     
+         } catch (NumberFormatException x) { 
+             System.out.print("Your input is invalid.");
+             System.out.print("\n\n\n\n\n");
+         }     
+         }while (true);
+         System.out.print("\n\n\n\n\n"); 
+//------------------------------------------------------------
+
+         do{   
+         System.out.print("Price of the Purchased equipment :"+a+" : "); 
+         try {          
+             h = Double.parseDouble(scan.nextLine());
+             break;     
+         } catch (NumberFormatException x) { 
+             System.out.print("Your input is invalid.");
+             System.out.print("\n\n\n\n\n");
+         }     
+         }while (true);
+         System.out.print("\n\n\n\n\n");  
+//------------------------------------------------------------
 
 //com1.addlast(new inventoryequipment("Stethoscope","To hear heart beat and others","Littmann 6152 Cardiology IV Stethoscope","Littmann","Testing Equipment","12/31/41",41,300000.00));
 //com1.addlast(new inventoryequipment("Weight Checker","To hear heart beat and others","Littmann 6152 Cardiology IV Stethoscope","Littmann","Testing Equipment","12/31/41",41,300000.00));
@@ -588,7 +657,7 @@ public class MedicalInventorySystem {
                                  maw = false;
                                  break;
                              case "3":
-                                 removemedicine();
+                                 removeequip();
                                  System.out.print("\n\n\n\n\n");
                                  maw = false;
                                  break;
