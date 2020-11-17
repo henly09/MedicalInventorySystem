@@ -225,7 +225,8 @@ public class MedicalInventorySystem {
 //        com2.addlast(new inventorymedicine("Ambroxol","For fever and headache","Generic","11/31/12",41,"12/31/20","DDC","Tablet","St.Lukes Hospital","11/41/08",5.00,12.41,41));
 //        com2.addlast(new inventorymedicine("Cetirizine","For fever and headache","Generic","11/31/12",41,"12/31/20","DDC","Tablet","St.Lukes Hospital","11/41/08",5.00,12.41,41));
 //        com2.addlast(new inventorymedicine("Loperamide","For fever and headache","Generic","11/31/12",41,"12/31/20","DDC","Tablet","St.Lukes Hospital","11/41/08",5.00,12.41,41));
-//                                 
+//                       
+
         com2.addfirst(new inventorymedicine(a,b,c,d,e,f,g,h,i,j,k,l,m));
        
         int qe = 0;
@@ -516,6 +517,7 @@ public class MedicalInventorySystem {
          }     
          }while (true);
          System.out.print("\n\n\n\n\n");  
+
 //------------------------------------------------------------
 
 //com1.addlast(new inventoryequipment("Stethoscope","To hear heart beat and others","Littmann 6152 Cardiology IV Stethoscope","Littmann","Testing Equipment","12/31/41",41,300000.00));
@@ -523,7 +525,7 @@ public class MedicalInventorySystem {
 //com1.addlast(new inventoryequipment("Dental Chair","To hear heart beat and others","Littmann 6152 Cardiology IV Stethoscope","Littmann","Testing Equipment","12/31/41",41,300000.00));
 //com1.addlast(new inventoryequipment("Surgery Knife","To hear heart beat and others","Littmann 6152 Cardiology IV Stethoscope","Littmann","Testing Equipment","12/31/41",41,300000.00));
 //com1.addlast(new inventoryequipment("Surgery Needles","To hear heart beat and others","Littmann 6152 Cardiology IV Stethoscope","Littmann","Testing Equipment","12/31/41",41,300000.00));
-//         
+         
          com1.addlast(new inventoryequipment(a,b,c,d,e,f,g,h));
          
         int qe = 0;
