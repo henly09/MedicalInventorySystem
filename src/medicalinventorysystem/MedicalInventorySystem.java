@@ -3,6 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
+/*
+    CC104 Project for Finals
+
+        John Henly Montera BSIT 2nd Year 
+        John Alvin Bula BSIT 2nd Year 
+        Ricardo Jose Linao BSIT 2nd Year 
+
+    CC104 MTWThF 1:00 - 2:00 PM
+
+*/
 package medicalinventorysystem;
 
 import java.util.Scanner;
