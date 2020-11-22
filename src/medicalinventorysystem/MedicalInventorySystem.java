@@ -7,9 +7,9 @@
 /*
     CC104 Project for Finals
 
-        John Henly Montera BSIT 2nd Year 
-        John Alvin Bula BSIT 2nd Year 
-        Ricardo Jose Linao BSIT 2nd Year 
+        John Henly Montera, BSIT 2nd Year 
+        John Alvin Bula, BSIT 2nd Year 
+        Ricardo Jose Linao, BSIT 2nd Year 
 
     CC104 MTWThF 1:00 - 2:00 PM
 
@@ -45,7 +45,9 @@ public class MedicalInventorySystem {
 
         boolean paw = true;
         
-    while (paw == true) {   
+        do {            
+        try {            
+        while (paw == true) {   
         
         System.out.print("Choices: \n\n");
         System.out.print("Medicines Inventory [1] \n");
@@ -88,18 +90,28 @@ public class MedicalInventorySystem {
                 System.out.print("Your input is Invalid! \n");
                 System.out.print("\n\n\n\n\n");
                 paw = true;
-                break;
-                
+                break;                
         }       
-       
-      }   
+      }
+        
+         break;
+        
+        } catch (NumberFormatException x) { 
+             System.out.print("Your input is invalid.");
+             System.out.print("\n\n\n\n\n");
+         }      
+        
+        } while (true);
     }
     
 //------------------------------------------------------------------------------------------------- Codes in Medicine Inventory
     
     public static void medicinechoice(){
+        
         boolean law = true;
         
+        do{
+        try{
         while (law){
             
             System.out.print("Insert Medicine into Inventory: [1] \n");
@@ -130,7 +142,14 @@ public class MedicalInventorySystem {
                     law = true;
                     break;
             }
+            
+            }
+        break;
+        } catch (NumberFormatException x){
+            System.out.print("Your input is invalid.");
+            System.out.print("\n\n\n\n\n");
         }
+      } while(true);
     }
     
     public static void insertMedicine(){
@@ -179,8 +198,18 @@ public class MedicalInventorySystem {
          System.out.print("Supplier's Name: ");
          g = scan.nextLine();
          System.out.print("\n\n\n\n\n");
+         
+          int q = 0;
+          
+         do{
+         q++;
+            if (q > 1){
+                System.out.print("Your input is invalid! \n\n\n\n\n\n");
+            }
          System.out.print("Type of Medicine (Syrup/Tablet/Injetion): ");
          h = scan.nextLine();
+         } while ((!h.equals("Syrup")) && (!h.equals("Tablet")) && (!h.equals("Injection")));
+         
          System.out.print("\n\n\n\n\n");
          System.out.print("Name of the Medicine's Company: ");
          i = scan.nextLine();
@@ -259,6 +288,9 @@ public class MedicalInventorySystem {
         System.out.print("\n\n\n\n\n");
        
         boolean waw = true;  
+        
+        do{
+           try{
         while (waw){
         
         System.out.print("Do you want to add more medicine? Yes[Y] || No[N] ");
@@ -297,7 +329,15 @@ public class MedicalInventorySystem {
                 break;
                 
             }
-        }         
+        }  
+        break;
+           } catch(NumberFormatException x){
+             System.out.print("Your input is invalid.");
+             System.out.print("\n\n\n\n\n");
+           }
+        } while(true);
+        
+        
     }   
     
     public static void removemedicine(){
@@ -310,6 +350,8 @@ public class MedicalInventorySystem {
           
          boolean awa = true;
          
+         do {
+         try{
          while (awa){
              
              System.out.print("Do you want to remove this? Yes[Y] or No[N] or Go back to the Menu [G] \n"+"Current Head:\n"+com2.head().displaymedicine());
@@ -357,9 +399,7 @@ public class MedicalInventorySystem {
                       boolean maw = true;
                      while (maw){
                      String ch = scan.nextLine();
-                    
-                     
-                         
+                                      
                          switch (ch) {
                              case "1":
                                  com2.rotateA();
@@ -394,7 +434,12 @@ public class MedicalInventorySystem {
                      break;
              }
     }  
-    
+         break;
+         }catch (NumberFormatException x){
+             System.out.print("Your input is invalid.");
+             System.out.print("\n\n\n\n\n");
+         }
+         } while(true);
     
 }
     
@@ -433,12 +478,13 @@ public class MedicalInventorySystem {
     } 
         
 //-------------------------------------------------------------------------------------------------- Codes in Hospital Equipment Inventory   
-    
-    
+      
     public static void equipmentchoice(){
         
         boolean law = true;
         
+        do {
+        try{
         while (law){
             
             System.out.print("Insert Equipment into Inventory: [1] \n");
@@ -470,6 +516,12 @@ public class MedicalInventorySystem {
                     break;
             }
         }
+         break;
+        } catch (NumberFormatException x){
+             System.out.print("Your input is invalid.");
+             System.out.print("\n\n\n\n\n");
+        }
+        } while (true);
     }
     
     public static void insertequip(){
@@ -557,7 +609,10 @@ public class MedicalInventorySystem {
         scan.nextLine();
         System.out.print("\n\n\n\n\n");
        
-        boolean waw = true;  
+        boolean waw = true; 
+        
+        do{
+            try{
         while (waw){
         
         System.out.print("Do you want to add more medicine? Yes[Y] || No[N] ");
@@ -597,6 +652,12 @@ public class MedicalInventorySystem {
                 
             }
         }
+        break;
+            } catch (NumberFormatException x){
+                System.out.print("Your input is invalid.");
+                System.out.print("\n\n\n\n\n");
+            }
+        } while(true);
         
     }
     
@@ -610,6 +671,8 @@ public class MedicalInventorySystem {
           
          boolean awa = true;
          
+         do {
+             try{
          while (awa){
              
              System.out.print("Do you want to remove this? Yes[Y] or No[N] or Go back to the Menu [G] \n"+"Current Head:\n"+com1.head().displayequipment());
@@ -690,10 +753,14 @@ public class MedicalInventorySystem {
                      System.out.print("Your input is invalid \n");
                      awa = true;
                      break;
+                }
+            } 
+             break;
+             } catch (NumberFormatException x){
+                 System.out.print("Your input is invalid.");
+                 System.out.print("\n\n\n\n\n");
              }
-    }  
-        
-        
+         } while (true);
     }
     
     public static void displayequipments(){
