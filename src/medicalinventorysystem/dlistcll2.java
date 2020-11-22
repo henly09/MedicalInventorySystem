@@ -44,6 +44,8 @@ public class dlistcll2<E> implements dcll<E> {
         return list.last();
     }
 
+//---------------------------------------------------------------------------------------- Rotation B: Tail to Head Rotation    
+    
     @Override
     public E rotatedB() throws EmptyListException {
         if (isEmpty()){
@@ -60,6 +62,8 @@ public class dlistcll2<E> implements dcll<E> {
         return list.rotateB();
     }
 
+//---------------------------------------------------------------------------------------------------------------------------      
+    
     @Override
     public void addlast(E element) {
         list.addLast(element);
@@ -70,6 +74,8 @@ public class dlistcll2<E> implements dcll<E> {
         list.addFirst(element);
     }
 
+//---------------------------------------------------------------------------------------- Rotation A: Head to Tail Rotation    
+    
     @Override
     public E rotatedA() throws EmptyListException {
         if (isEmpty()){
@@ -86,6 +92,8 @@ public class dlistcll2<E> implements dcll<E> {
         return list.rotateA();
     }
 
+//---------------------------------------------------------------------------------------------------------------------------    
+    
     @Override
     public E removefirst() throws EmptyListException {
         if (isEmpty()){

@@ -13,6 +13,17 @@
 
     CC104 MTWThF 1:00 - 2:00 PM
 
+NOTES:
+
+    rotateA() = Head to Tail 
+    RotateB() = Tail to Head
+    Structure = Cirular Linked List
+    com1 = equipments inventory
+    com2 = medicine inventory
+
+    DList1 = dlistcll<>() = For medicine inventory
+    DList2 = dlistcll2<>() = For equipments inventory
+
 */
 package medicalinventorysystem;
 
