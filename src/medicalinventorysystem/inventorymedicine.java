@@ -189,7 +189,7 @@ public class inventorymedicine {
     /**
      * @param purchasedprice the purchasedprice to set
      */
-    public void setPurchasedprice(int purchasedprice) {
+    public void setPurchasedprice(double purchasedprice) {
         this.purchasedprice = purchasedprice;
     }
 
@@ -203,7 +203,7 @@ public class inventorymedicine {
     /**
      * @param saleprice the saleprice to set
      */
-    public void setSaleprice(int saleprice) {
+    public void setSaleprice(double saleprice) {
         this.saleprice = saleprice;
     }
 
@@ -221,10 +221,7 @@ public class inventorymedicine {
         this.mrackno = mrackno;
     }
 
-    
-    
-    
- 
+       
     public String displaymedicine(){
         
         String display;
