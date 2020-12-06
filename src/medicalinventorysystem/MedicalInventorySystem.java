@@ -21,7 +21,7 @@ NOTES:
     rotateA() = Head to Tail 
     RotateB() = Tail to Head
 
-    Structure = Doubly Cirular Linked List
+    Structure = Doubly Circular Linked List
 
     com1 = Hospital Equipments Inventory
     com2 = medicine inventory
