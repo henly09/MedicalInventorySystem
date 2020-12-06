@@ -7,7 +7,7 @@ package medicalinventorysystem;
 
 /**
  *
- * @author Enubs
+ * 
  */
 public class EmptyListException extends NullPointerException{
     public EmptyListException(String msg){
